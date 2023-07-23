@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "ARStoUSDT",
+    "author": "Ann0nip",
+    "version": "1.0",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "description": "ARStoUSDT: ¡La extensión para Chrome que convierte valores en Pesos Argentinos a USDT sin complicaciones! Compra más inteligentemente en línea. 💲🛍️",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "contentScript.js"
+            ],
+            "matches": [
+                "https://*.mercadolibre.com.ar/*"
+            ]
+        }
+    ]
+}
